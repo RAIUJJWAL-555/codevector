@@ -11,7 +11,9 @@ const cors = require('cors');         // frontend ko backend se baat karne deta 
 const Product = require('./models/Product');
 
 const app = express();
-app.use(cors());            // allow frontend to talk to backend
+app.use(cors({
+  origin: ['https://codevector-kohl.vercel.app', 'http://localhost:5173'],
+}));            // allow frontend to talk to backend
 app.use(express.json());    // JSON data samajhne ke liye
 
 // ============================================================
