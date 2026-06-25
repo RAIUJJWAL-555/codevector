@@ -66,6 +66,13 @@ function readCursor(cursor) {
 }
 
 // ============================================================
+// ROOT ROUTE
+// ============================================================
+app.get('/', (_req, res) => {
+  res.json({ status: 'running', message: 'CodeVector Backend is running!' });
+});
+
+// ============================================================
 // API ROUTES (YE ENDPOINTS FRONTEND CALL KARTA HAI)
 // ============================================================
 
